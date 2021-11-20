@@ -1,0 +1,10 @@
+[mysqld]
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+datadir         = /var/lib/mysql
+symbolic-links=0
+max_allowed_packet = 32MB
+character-set-server = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4

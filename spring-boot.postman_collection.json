@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "68cd4bda-28b0-4ecb-8436-d74270a7a387",
+		"name": "spring-boot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "account",
+			"item": [
+				{
+					"name": "get-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20080/account/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20080",
+							"path": [
+								"account",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20080/account?emailAddress=test@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20080",
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "emailAddress",
+									"value": "test@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:20080/account?emailAddress=test01@test.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20080",
+							"path": [
+								"account"
+							],
+							"query": [
+								{
+									"key": "emailAddress",
+									"value": "test01@test.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post-insert",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"emailAddress\": \"test01@test.com\",\n    \"nickName\": \"nickname01\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20080/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"accountNumber\": 1,\n    \"emailAddress\": \"test01@test.com\",\n    \"nickName\": \"nickname01-update\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:20080/account",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "20080",
+							"path": [
+								"account"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
