@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    platform: linux/amd64
+    container_name: docker-mysql-jpa
+    build: ./docker-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      TZ: Asia/Tokyo
+    ports:
+      - 23306:3306
+    volumes:
+      - ./docker-mysql/data:/var/lib/mysql
+      - ./docker-mysql/tools:/tmp/tools
