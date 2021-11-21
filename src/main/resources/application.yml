@@ -1,5 +1,7 @@
 server:
   port: 20080
+  servlet:
+    context-path: /api
 spring:
   datasource:
     schema1:

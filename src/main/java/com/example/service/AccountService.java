@@ -85,6 +85,9 @@ public class AccountService extends ServiceBase {
             if (ObjectUtils.isEmpty(account)) {
                 throw createAppException("target nothing.", HttpStatus.BAD_REQUEST);
             }
+            if(account.getAccountNumber() != accountUpdateRequest.getAccountNumber()){
+                throw createAppException("accountNumber error.", HttpStatus.BAD_REQUEST);
+            }
 
             // update set
             account.setNickName(accountUpdateRequest.getNickName());

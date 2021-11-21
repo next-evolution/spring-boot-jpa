@@ -41,5 +41,5 @@ exit
 ```
 ./gradlew bootRun
 
-http://localhost:20080
+http://localhost:20080/api
 ```
